@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: consumer-message
+server:
+  port: 9500
+eureka:
+  instance:
+    prefer-ip-address: true # 注册服务的时候使用服务的ip地址
+  client:
+    register-with-eureka: false #不把自己注册到eureka上
+    service-url:
+      defaultZone: http://localhost:9500/eureka/
